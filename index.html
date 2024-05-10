@@ -50,7 +50,7 @@
             if (os == "iphone") {
                 // webkitCompasssHeading値を採用
                 degrees = event.webkitCompassHeading;
-var img = document.getElementById('myImage');
+                var img = document.getElementById('pic1');
             } else {
                 // deviceorientationabsoluteイベントのalphaを補正
                 degrees = compassHeading(alpha, beta, gamma);
@@ -59,16 +59,16 @@ var img = document.getElementById('myImage');
                 //window.location.href = "https://hanepyonn66.github.io/AR_location_test/";
                 window.arert("北を向いています")
             }
-            if(degrees<45){
+            if (degrees < 45) {
                 img.src = "left_slower.png";
             }
-            else if(degrees<180){
+            else if (degrees < 180) {
                 img.src = "left.png";
             }
-            else if(degrees<315){
+            else if (degrees < 315) {
                 img.src = "right.png";
             }
-            else{
+            else {
                 img.src = "right_slower.png";
             }
             let direction;
@@ -163,12 +163,26 @@ var img = document.getElementById('myImage');
                 .catch(console.error);
         }
     </script>
+    <style>
+        /* 画像をウィンドウサイズに合わせて縮小するためのスタイル */
+        #pic1 {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            /* 画像が親要素に収まるように縮小 */
+        }
+
+        /* ボディ要素のマージンを0に設定する */
+        body {
+            margin: 0;
+        }
+    </style>
 </head>
 
 <body>
     <input type="button" id="permit" value="SafariでDeviceOrientationを許可" />
     <h1>【方角】<span id="direction"></span></h1>
-    <img id="myImage" src="left.png" alt="pic1">
+    <img id="pic1" src="left.png" alt="pic1">
 </body>
 
 </html>
