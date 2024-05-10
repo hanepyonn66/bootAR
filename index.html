@@ -46,10 +46,11 @@
             let gamma = event.gamma;
 
             let degrees;
+
             if (os == "iphone") {
                 // webkitCompasssHeading値を採用
                 degrees = event.webkitCompassHeading;
-
+var img = document.getElementById('myImage');
             } else {
                 // deviceorientationabsoluteイベントのalphaを補正
                 degrees = compassHeading(alpha, beta, gamma);
@@ -57,6 +58,18 @@
             if (degrees < 5 || degrees > 355) {
                 //window.location.href = "https://hanepyonn66.github.io/AR_location_test/";
                 window.arert("北を向いています")
+            }
+            if(degrees<45){
+                img.src = "left_slower.png";
+            }
+            else if(degrees<180){
+                img.src = "left_slower.png";
+            }
+            else if(degrees<315){
+                img.src = "left_slower.png";
+            }
+            else{
+                img.src = "left_slower.png";
             }
             let direction;
             if (
@@ -155,7 +168,7 @@
 <body>
     <input type="button" id="permit" value="SafariでDeviceOrientationを許可" />
     <h1>【方角】<span id="direction"></span></h1>
-
+    <img id="myImage" src="left.png" alt="pic1">
 </body>
 
 </html>
