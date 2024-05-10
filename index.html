@@ -93,7 +93,7 @@
             }
 
             document.querySelector("#direction").innerHTML =
-                direction + " : " + degrees;
+                direction + " : " + Math.round(degrees * 100) / 100;
         }
 
         // 端末の傾き補正（Android用）
