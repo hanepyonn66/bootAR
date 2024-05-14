@@ -56,7 +56,7 @@
                 // deviceorientationabsoluteイベントのalphaを補正
                 degrees = compassHeading(alpha, beta, gamma);
             }
-            let degrees_compass=360-degrees;
+            let degrees_compass = 360 - degrees;
             if (degrees < 5 || degrees > 355) {
                 window.alert("回転を止め,北を向いたままカメラ及びGPSのアクセスを許可してください");
                 window.location.href = "https://hanepyonn66.github.io/AR_location_test/";
@@ -220,16 +220,28 @@
             window.location.href = "https://hanepyonn66.github.io/AR_location_test/"; // 開きたいサイトのURLを指定
         }
     </script>
-</head> 
+    <style>
+        /* コンテナのスタイルを定義 */
+        .container {
+            display: flex;
+            /* フレックスボックスを使用 */
+            flex-direction: column;
+            /* 列方向に配置 */
+            height: 100vh;
+            /* ビューポートの高さいっぱいにする */
+        }
+    </style>
+</head>
 
 <body>
-    <input type="button" id="permit" value="Safariの方は最初に押してください" class="button" />
-    <h2><span class="ctext">方角のアクティベーションを行います</span></h2>
-    <h2><span class="ctext">北を向いてください</span></h2>
-    <h2><span class="ctext">【現在向いている方角】<span id="direction"></span></span></h2>
-    <img id="pic1" src="north.png" alt="pic1">
-    <button class="buttun2" onclick="openWebsite()">手動でアクティベーション</button>
-
+    <div class="container">
+        <input type="button" id="permit" value="Safariの方は最初に押してください" class="button" />
+        <h2><span class="ctext">方角のアクティベーションを行います</span></h2>
+        <h2><span class="ctext">北を向いてください</span></h2>
+        <h2><span class="ctext">【現在向いている方角】<span id="direction"></span></span></h2>
+        <img id="pic1" src="north.png" alt="pic1">
+        <button class="buttun2" onclick="openWebsite()">手動でアクティベーション</button>
+    </div>
 
 </body>
 
