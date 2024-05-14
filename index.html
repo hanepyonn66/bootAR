@@ -169,7 +169,7 @@
         body {
             margin: 0;
         }
-    
+
         /* ボタンのスタイルを定義 */
         .button {
             font-size: 22px;
@@ -187,7 +187,7 @@
             border-radius: 10px;
             /* 角丸にする */
         }
-    
+
         /* ボタンのスタイルを定義 */
         .button2 {
             font-size: 24px;
@@ -205,7 +205,7 @@
             border-radius: 10px;
             /* 角丸にする */
         }
-    
+
         /* 中央揃えにしたいテキストにスタイルを適用 */
         .ctext {
             text-align: center;
@@ -214,8 +214,14 @@
     </style>
     <script>
         function openWebsite() {
-            window.alert("北を向いた状態で次に進んでください")
-            window.location.href = "https://hanepyonn66.github.io/AR_location_test/"; // 開きたいサイトのURLを指定
+            var result = confirm("iPhone利用の方は緑色のボタンを押しましたか？");
+            if (result) {
+                window.alert("北を向いた状態で次に進んでください")
+                window.location.href = "https://hanepyonn66.github.io/AR_location_test/";
+
+            } else {
+                window.alert("押してから次に進んでください")
+            }
         }
     </script>
     <style>
@@ -225,12 +231,14 @@
             /* フレックスボックスを使用 */
             flex-direction: column;
             /* 列方向に配置 */
-            height: 80vh;
+            height: 70vh;
             /* ビューポートの高さいっぱいにする */
         }
+
         .text {
-      font-size: 5vw; /* テキストのサイズをビューポートの幅に対して自動調整 */
-    }
+            font-size: 5vw;
+            /* テキストのサイズをビューポートの幅に対して自動調整 */
+        }
     </style>
 </head>
 
