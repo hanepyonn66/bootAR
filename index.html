@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <title>Document</title>
 
     <script type="text/javascript">
@@ -59,17 +60,8 @@
                 window.alert("回転を止め,北を向いたままカメラ及びGPSのアクセスを許可してください");
                 window.location.href = "https://hanepyonn66.github.io/AR_location_test/";
             }
-            if (degrees < 45) {
-                img.src = "left_slower.png";
-            }
-            else if (degrees < 180) {
-                img.src = "left.png";
-            }
-            else if (degrees < 315) {
-                img.src = "right.png";
-            }
             else {
-                img.src = "right_slower.png";
+                img.style.transform =`rotate(${degrees}deg)` ;
             }
             let direction;
             if (
@@ -180,29 +172,36 @@
     <style>
         /* ボタンのスタイルを定義 */
         .button {
-          font-size: 24px; /* フォントサイズを大きくする */
-          padding: 20px 40px; /* 上下左右の余白を追加 */
-          border: none; /* ボーダーを削除 */
-          background-color: #4CAF50; /* 背景色を設定 */
-          color: white; /* テキスト色を白に設定 */
-          cursor: pointer; /* カーソルをポインターに変更 */
-          border-radius: 10px; /* 角丸にする */
+            font-size: 24px;
+            /* フォントサイズを大きくする */
+            padding: 20px 40px;
+            /* 上下左右の余白を追加 */
+            border: none;
+            /* ボーダーを削除 */
+            background-color: #4CAF50;
+            /* 背景色を設定 */
+            color: white;
+            /* テキスト色を白に設定 */
+            cursor: pointer;
+            /* カーソルをポインターに変更 */
+            border-radius: 10px;
+            /* 角丸にする */
         }
-      </style>
-      <style>
-    /* 中央揃えにしたいテキストにスタイルを適用 */
-    .ctext {
-      text-align: center;
-    }
-  </style>
-    </head>
+    </style>
+    <style>
+        /* 中央揃えにしたいテキストにスタイルを適用 */
+        .ctext {
+            text-align: center;
+        }
+    </style>
+</head>
 
 <body>
     <input type="button" id="permit" value="Safariの方は最初に押してください" class="button" />
     <h1><span class="ctext">方角のアクティベーションを行います</span></h1>
     <h1><span class="ctext">北を向いてください</span></h1>
     <h2><span class="ctext">【現在向いている方角】<span id="direction"></span></span></h2>
-    <img id="pic1" src="left.png" alt="pic1">
+    <img id="pic1" src="north.png" alt="pic1">
 </body>
 
 </html>
