@@ -56,7 +56,7 @@
                 degrees = compassHeading(alpha, beta, gamma);
             }
             if (degrees < 5 || degrees > 355) {
-                window.alert("回転を止めてください");
+                window.alert("回転を止め,北を向いたままカメラ及びGPSのアクセスを許可してください");
                 window.location.href = "https://hanepyonn66.github.io/AR_location_test/";
             }
             if (degrees < 45) {
