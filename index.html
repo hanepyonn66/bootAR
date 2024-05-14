@@ -189,11 +189,19 @@
           border-radius: 10px; /* 角丸にする */
         }
       </style>
+      <style>
+    /* 中央揃えにしたいテキストにスタイルを適用 */
+    .ctext {
+      text-align: center;
+    }
+  </style>
     </head>
 
 <body>
-    <input type="button" id="permit" value="Safariの方は押してください" class="button" />
-    <h1>【方角】<span id="direction"></span></h1>
+    <input type="button" id="permit" value="Safariの方は最初に押してください" class="button" />
+    <h1><span class="ctext">方角のアクティベーションを行います</span></h1>
+    <h1><span class="ctext">北を向いてください</span></h1>
+    <h2><span class="ctext">【現在向いている方角】<span id="direction"></span></span></h2>
     <img id="pic1" src="left.png" alt="pic1">
 </body>
 
