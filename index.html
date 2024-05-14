@@ -57,7 +57,7 @@
                 degrees = compassHeading(alpha, beta, gamma);
             }
             let degrees_compass = 360 - degrees;
-            if (degrees < 5 || degrees > 355) {
+            if ((degrees != 0 && degrees < 5) || degrees > 355) {
                 window.alert("回転を止め,北を向いたままカメラ及びGPSのアクセスを許可してください");
                 window.location.href = "https://hanepyonn66.github.io/AR_location_test/";
             }
@@ -217,6 +217,7 @@
     </style>
     <script>
         function openWebsite() {
+            window.alert("北を向いた状態で次に進んでください")
             window.location.href = "https://hanepyonn66.github.io/AR_location_test/"; // 開きたいサイトのURLを指定
         }
     </script>
@@ -236,7 +237,7 @@
 <body>
     <div class="container">
         <input type="button" id="permit" value="Safariの方は最初に押してください" class="button" />
-        <h2><span class="ctext">方角のアクティベーションを行いますv1</span></h2>
+        <h2><span class="ctext">方角のアクティベーションを行いますv2</span></h2>
         <h2><span class="ctext">北を向いてください</span></h2>
         <h2><span class="ctext">【現在向いている方角】<span id="direction"></span></span></h2>
         <img id="pic1" src="north.png" alt="pic1">
