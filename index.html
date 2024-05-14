@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>Document</title>
+    <title>方角アクティベーション</title>
 
     <script type="text/javascript">
         // OS識別用
@@ -161,7 +161,7 @@
         #pic1 {
             width: 50%;
             height: auto;
-            object-fit: contain;
+
             /* 画像が親要素に収まるように縮小 */
         }
 
@@ -169,8 +169,7 @@
         body {
             margin: 0;
         }
-    </style>
-    <style>
+    
         /* ボタンのスタイルを定義 */
         .button {
             font-size: 22px;
@@ -188,8 +187,7 @@
             border-radius: 10px;
             /* 角丸にする */
         }
-    </style>
-    <style>
+    
         /* ボタンのスタイルを定義 */
         .button2 {
             font-size: 24px;
@@ -207,8 +205,7 @@
             border-radius: 10px;
             /* 角丸にする */
         }
-    </style>
-    <style>
+    
         /* 中央揃えにしたいテキストにスタイルを適用 */
         .ctext {
             text-align: center;
@@ -222,12 +219,6 @@
         }
     </script>
     <style>
-        /* h2要素間の余分なマージンを削除 */
-        h2 + h2 {
-          margin-top: 1;
-        }
-      </style>
-    <style>
         /* コンテナのスタイルを定義 */
         .container {
             display: flex;
@@ -237,14 +228,16 @@
             height: 100vh;
             /* ビューポートの高さいっぱいにする */
         }
+        .text {
+      font-size: 5vw; /* テキストのサイズをビューポートの幅に対して自動調整 */
+    }
     </style>
 </head>
 
 <body>
     <div class="container">
         <input type="button" id="permit" value="Safariの方は最初に押してください" class="button" />
-        <h2><span class="ctext">方角のアクティベーションを行いますv3</span></h2>
-        <h2><span class="ctext">北を向いてください</span></h2>
+        <p class="text">方角のアクティベーションを行いますv5<br>北を向いてください</p>
         <h2><span class="ctext">【現在向いている方角】<span id="direction"></span></span></h2>
         <img id="pic1" src="north.png" alt="pic1">
         <button class="button2" onclick="openWebsite()">手動でアクティベーション</button>
