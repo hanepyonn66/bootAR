@@ -173,7 +173,7 @@
     <style>
         /* ボタンのスタイルを定義 */
         .button {
-            font-size: 24px;
+            font-size: 22px;
             /* フォントサイズを大きくする */
             padding: 20px 40px;
             /* 上下左右の余白を追加 */
@@ -222,6 +222,12 @@
         }
     </script>
     <style>
+        /* h2要素間の余分なマージンを削除 */
+        h2 + h2 {
+          margin-top: 1;
+        }
+      </style>
+    <style>
         /* コンテナのスタイルを定義 */
         .container {
             display: flex;
@@ -237,7 +243,7 @@
 <body>
     <div class="container">
         <input type="button" id="permit" value="Safariの方は最初に押してください" class="button" />
-        <h2><span class="ctext">方角のアクティベーションを行いますv2</span></h2>
+        <h2><span class="ctext">方角のアクティベーションを行いますv3</span></h2>
         <h2><span class="ctext">北を向いてください</span></h2>
         <h2><span class="ctext">【現在向いている方角】<span id="direction"></span></span></h2>
         <img id="pic1" src="north.png" alt="pic1">
