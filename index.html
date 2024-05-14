@@ -58,7 +58,7 @@
             }
             let degrees_compass = 360 - degrees;
             if ((degrees != 0 && degrees < 5) || degrees > 355) {
-                window.alert("回転を止め,北を向いたままカメラ及びGPSのアクセスを許可してください");
+                window.alert("北を向いたことを検知しました。回転を止め,北を向いたままカメラ及びGPSのアクセスを許可してください");
                 window.location.href = "https://hanepyonn66.github.io/AR_location_test/";
             }
             else {
@@ -239,6 +239,18 @@
             font-size: 5vw;
             /* テキストのサイズをビューポートの幅に対して自動調整 */
         }
+
+        .image-container {
+            text-align: center;
+            /* 中央揃えにする */
+        }
+
+        .image-container img {
+            display: inline-block;
+            /* インラインブロック要素にする */
+            margin: 0 auto;
+            /* 左右のマージンを自動的に設定して中央に配置 */
+        }
     </style>
 </head>
 
@@ -247,7 +259,7 @@
         <input type="button" id="permit" value="Safariの方は最初に押してください" class="button" />
         <p class="text"><b>方角のアクティベーションを行いますv7<br>北を向いてください</b></p>
         <h2><span class="ctext">【現在向いている方角】<span id="direction">未検出</span></span></h2>
-        <img id="pic1" src="north.png" alt="pic1">
+        <div class="image-container"><img id="pic1" src="north.png" alt="pic1"></div>
         <button class="button2" onclick="openWebsite()">手動でアクティベーション</button>
     </div>
 
