@@ -225,7 +225,7 @@
             /* フレックスボックスを使用 */
             flex-direction: column;
             /* 列方向に配置 */
-            height: 100vh;
+            height: 80vh;
             /* ビューポートの高さいっぱいにする */
         }
         .text {
@@ -237,8 +237,8 @@
 <body>
     <div class="container">
         <input type="button" id="permit" value="Safariの方は最初に押してください" class="button" />
-        <p class="text">方角のアクティベーションを行いますv5<br>北を向いてください</p>
-        <h2><span class="ctext">【現在向いている方角】<span id="direction"></span></span></h2>
+        <p class="text"><b>方角のアクティベーションを行いますv7<br>北を向いてください</b></p>
+        <h2><span class="ctext">【現在向いている方角】<span id="direction">未検出</span></span></h2>
         <img id="pic1" src="north.png" alt="pic1">
         <button class="button2" onclick="openWebsite()">手動でアクティベーション</button>
     </div>
