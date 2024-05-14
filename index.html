@@ -61,7 +61,7 @@
                 window.location.href = "https://hanepyonn66.github.io/AR_location_test/";
             }
             else {
-                img.style.transform =`rotate(${degrees}deg)` ;
+                img.style.transform = `rotate(${degrees}deg)`;
             }
             let direction;
             if (
@@ -189,11 +189,35 @@
         }
     </style>
     <style>
+        /* ボタンのスタイルを定義 */
+        .button2 {
+            font-size: 24px;
+            /* フォントサイズを大きくする */
+            padding: 20px 40px;
+            /* 上下左右の余白を追加 */
+            border: none;
+            /* ボーダーを削除 */
+            background-color: #cca527;
+            /* 背景色を設定 */
+            color: rgb(0, 0, 0);
+            /* テキスト色を白に設定 */
+            cursor: pointer;
+            /* カーソルをポインターに変更 */
+            border-radius: 10px;
+            /* 角丸にする */
+        }
+    </style>
+    <style>
         /* 中央揃えにしたいテキストにスタイルを適用 */
         .ctext {
             text-align: center;
         }
     </style>
+    <script>
+        function openWebsite() {
+            window.location.href = "https://example.com"; // 開きたいサイトのURLを指定
+        }
+    </script>
 </head>
 
 <body>
@@ -202,6 +226,9 @@
     <h1><span class="ctext">北を向いてください</span></h1>
     <h2><span class="ctext">【現在向いている方角】<span id="direction"></span></span></h2>
     <img id="pic1" src="north.png" alt="pic1">
+    <button type="buttun2" onclick="openWebsite()">手動でアクティベーション</button>
+
+
 </body>
 
 </html>
