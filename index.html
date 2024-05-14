@@ -177,10 +177,22 @@
             margin: 0;
         }
     </style>
-    
+    <style>
+        /* ボタンのスタイルを定義 */
+        .button {
+          font-size: 24px; /* フォントサイズを大きくする */
+          padding: 20px 40px; /* 上下左右の余白を追加 */
+          border: none; /* ボーダーを削除 */
+          background-color: #4CAF50; /* 背景色を設定 */
+          color: white; /* テキスト色を白に設定 */
+          cursor: pointer; /* カーソルをポインターに変更 */
+          border-radius: 10px; /* 角丸にする */
+        }
+      </style>
+    </head>
 
 <body>
-    <input type="button" id="permit" value="SafariでDeviceOrientationを許可" />
+    <input type="button" id="permit" value="Safariの方は押してください" class="button" />
     <h1>【方角】<span id="direction"></span></h1>
     <img id="pic1" src="left.png" alt="pic1">
 </body>
