@@ -57,7 +57,7 @@
                 degrees = compassHeading(alpha, beta, gamma);
             }
             let degrees_compass = 360 - degrees;
-            if ((degrees != 0 && degrees < 5) || degrees > 355) {
+            if ((degrees != 0 && degrees < 2.5) || degrees > 357.5) {
                 window.alert("北を向いたことを検知しました。【北を向いたまま】カメラへのアクセスを許可してください");
                 window.location.href = "https://hanepyonn66.github.io/AR_location_test/";
             }
